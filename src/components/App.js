@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../assets/images/Logo_GOffice.png';
+import '../assets/css/App.css';
 
 function App() {
   return (
