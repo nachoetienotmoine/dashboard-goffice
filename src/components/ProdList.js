@@ -1,6 +1,6 @@
 import react from 'react';
 
-function LastUProdListserCreate() {
+function ProdList() {
   return (
     <div >
       
