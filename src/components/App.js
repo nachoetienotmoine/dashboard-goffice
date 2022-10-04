@@ -6,6 +6,7 @@ import ProdList from './ProdList';
 import TotalCategories from './TotalCategories';
 import TotalProducts from './TotalProducts';
 import TotalUsers from './TotalUsers';
+
 function App() {
   return (
     <div className="App">
@@ -14,17 +15,15 @@ function App() {
         <p>
           ¿y Karina?
         </p>
-       
-       <div>
+        <div> 
           <LastProductCreate />
           <LastUserCreate />
           <ProdList />
           <TotalCategories />
           <TotalProducts />
           <TotalUsers />
+
         </div>
-       
-      
         <a
           className="App-link"
           href="https://reactjs.org"

@@ -3,7 +3,7 @@ import react from 'react';
 function LastProductCreate() {
   return (
     <div >
-      <p>akastuski </p>
+      <p> hacete culiar</p> 
     </div>
   );
 }
