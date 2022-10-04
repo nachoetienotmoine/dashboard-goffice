@@ -3,9 +3,13 @@ import react from 'react';
 
 function TotalUsers() {
   return (
-    <div >
-      <p> dfhfdh</p>
+    <div className="Card2">
+            
+    <div className='conteiner'>
+     <h2>Total usuarios</h2>
     </div>
+
+</div>
   );
 }
 

@@ -2,8 +2,14 @@ import react from 'react';
 
 function TotalProducts() {
   return (
-    <div >
-      <p> hdfhhf</p>
+    
+    <div className="Card2">
+            
+            <div className='conteiner'>
+             <h2>Total Products</h2>
+            </div>
+   
+     
     </div>
   );
 }

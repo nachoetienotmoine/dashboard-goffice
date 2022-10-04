@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +35,73 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body{
+  background-color: black;
+  
+  
+}
+
+
+.card{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items:center ;
+  
+}
+
+.DivTitulo{
+  display: flex;
+  flex-direction: column;
+  border: solid 2px;
+  border-color: #9CFF2E;
+  box-shadow: 2px 2px 2px 2px #9CFF2E;
+  border-radius: 10%;
+  height: 10%;
+  width: 20%;
+  color: #9CFF2E;
+}
+
+
+
+.Product{
+  border: solid 3px;
+  border-color: #0ff;
+  border-radius: 10%;
+  box-shadow: 2px 2px 2px 2px #0ff;
+  padding-bottom: 10%;
+  margin-bottom: 10%;
+  color: #0ff;
+}
+
+.smallcards{
+
+  color: aliceblue;
+  border: solid 1px white;
+}
+
+.Titulo{
+  color: aliceblue;
+}
+
+.conteiner{
+  width: 10%;
+  height: 10%;
+  border: solid 3px;
+  border-color: #0ff;
+  border-radius: 10%;
+  box-shadow: 2px 2px 2px 2px #0ff;
+  color: #0ff;
+}
+
+
+.Card2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+  
+
 }

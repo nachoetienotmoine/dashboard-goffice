@@ -15,13 +15,17 @@ function App() {
         <p>
           ¿y Karina?
         </p>
-        <div> 
+      </header>
+
+      <body>
+      <div> 
           <LastProductCreate />
           <LastUserCreate />
           <ProdList />
           <TotalCategories />
           <TotalProducts />
           <TotalUsers />
+        
 
         </div>
         <a
@@ -32,7 +36,7 @@ function App() {
         >
           AK VAMO A SE EL DASBOR PAL ADMIN
         </a>
-      </header>
+      </body>
     </div>
   );
 }
