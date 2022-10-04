@@ -12,9 +12,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          ¿y Karina?
-        </p>
+        <h1>
+          Dashboard Goffice
+        </h1>
+        <nav>
+
+
+        </nav>
       </header>
 
       <body>
@@ -25,17 +29,7 @@ function App() {
           <TotalCategories />
           <TotalProducts />
           <TotalUsers />
-        
-
         </div>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          AK VAMO A SE EL DASBOR PAL ADMIN
-        </a>
       </body>
     </div>
   );
