@@ -23,8 +23,11 @@ function App() {
 
       <body>
       <div> 
-          <LastProductCreate />
-          <LastUserCreate />
+        <div className='div-row'>
+        <LastProductCreate />
+        <LastUserCreate />
+        </div>
+
           <ProdList />
           <TotalCategories />
           <TotalProducts />

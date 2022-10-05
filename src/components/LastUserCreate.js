@@ -2,8 +2,8 @@ import react from 'react';
 
 function LastUserCreate() {
   return (
-    <div >
-      <p> hdfhdf</p>
+    <div className="lastCrated">
+      <h3 className="lastCrated-title-card"> Last User Create</h3> 
     </div>
   );
 }
