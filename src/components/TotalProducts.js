@@ -5,9 +5,7 @@ function TotalProducts() {
     
     <div className="Card2">
             
-            <div className='conteiner'>
-             <h2>Total Products</h2>
-            </div>
+            
    
      
     </div>

@@ -16,25 +16,24 @@ function App() {
           Dashboard Goffice
         </h1>
         <nav>
-
-
+          
         </nav>
       </header>
 
-      <body>
+    <body>
       <div> 
         <div className='div-row'>
-        <LastProductCreate />
-        <LastUserCreate />
+          <LastProductCreate />
+          <LastUserCreate />
         </div>
 
-          <ProdList />
-          <TotalCategories />
-          <TotalProducts />
-          <TotalUsers />
-        </div>
-      </body>
-    </div>
+        <ProdList />
+        <TotalCategories />
+        <TotalProducts />
+        <TotalUsers />
+      </div>
+    </body>
+  </div>
   );
 }
 

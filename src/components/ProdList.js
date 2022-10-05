@@ -41,7 +41,7 @@ function ProdList() {
             </div>
             <div className="col-lg-6 mb-4">
               <div className="card bg-dark text-white shadow">
-                <div className="Product">sabroso</div>
+                <div className="Product">Luces</div>
               </div>
             </div>
           </div>

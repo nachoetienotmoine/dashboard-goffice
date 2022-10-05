@@ -1,5 +1,5 @@
 import react from 'react';
-import SmallCard from './smallCard';
+import SmallCard from './SmallCard';
 
 /*  Cada set de datos es un objeto literal */
 
@@ -8,7 +8,7 @@ import SmallCard from './smallCard';
 let Categories = {
   title: 'Total categories',
   color: 'primary', 
-  cuantity: 2,
+  cuantity: "9",
   icon: 'fa-clipboard-list'
 }
 
@@ -38,13 +38,15 @@ let cards = [Categories, Products, Users];
 function TotalCategories() {
   return (
     
-    <div className="Card2">
+    <div className="row">
             
-         <div className='conteiner'>
-          <h2>Total Categories</h2>
-         </div>
+    {cards.map( (Categories, i) => {
 
-  </div>
+        return <SmallCard {...Categories} key={i}/>
+    
+    })}
+
+</div>
 );
 }
 
