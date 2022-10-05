@@ -4,11 +4,10 @@ import logo from '../assets/images/Logo_GOffice.png';
 function LastProductCreate() {
   return (
     <div className="lastCrated mb-4">
-      <h3 className="lastCrated-title-card"> Last Product Create</h3> 
-      {/* <div className="col-lg-6 mb-4">
-            <div className="card shadow mb-4">
-                <div className="card-header py-3">
-                    <h5 className="m-0 font-weight-bold text-gray-800">Last movie in Data Base</h5>
+      <div className="col-lg-6 mb-4">
+            <div className="crd shadow mb-4">
+                <div className="crd-header py-3">
+                    <h5 className="m-0 font-weight-bold text-gray-800">Last Product Create</h5>
                 </div>
                 <div className="card-body">
                     <div className="text-center">
@@ -18,7 +17,7 @@ function LastProductCreate() {
                     <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
                 </div>
             </div>
-        </div> */}
+        </div>
     </div>
   );
 }

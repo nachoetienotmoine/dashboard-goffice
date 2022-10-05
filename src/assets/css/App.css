@@ -122,7 +122,8 @@ body{
 }
 .div-row{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   margin-right: -0.75rem;
   margin-left: .0.75rem;
   box-sizing: border-box;
