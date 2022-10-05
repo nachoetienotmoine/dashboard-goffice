@@ -1,4 +1,5 @@
 import logo from '../assets/images/Logo_GOffice.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../assets/css/App.css';
 import LastProductCreate from './LastProductCreate';
 import LastUserCreate from './LastUserCreate';
@@ -16,7 +17,7 @@ function App() {
           Dashboard Goffice
         </h1>
         <nav>
-          
+
         </nav>
       </header>
 

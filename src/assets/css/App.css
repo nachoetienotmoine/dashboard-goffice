@@ -92,7 +92,7 @@ body{
   border: solid 3px;
   border-color: #0ff;
   border-radius: 10%;
-  box-shadow: 2px 2px 2px 2px #0ff;
+  box-shadow: 2px 2px 2px 2px rgb(0, 166, 255);
   color: #0ff;
 }
 
@@ -103,6 +103,17 @@ body{
   justify-content: center;
   
   
+
+}
+
+.PincipalCard{
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  border: solid 1px rgb(0, 166, 255);
+  height: 20%;
+  width: 20%;
+  margin-bottom: 5%;
 
 }
 
