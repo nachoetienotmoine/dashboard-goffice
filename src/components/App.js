@@ -1,40 +1,12 @@
-import logo from '../assets/images/Logo_GOffice.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import '../assets/css/App.css';
-import LastProductCreate from './LastProductCreate';
-import LastUserCreate from './LastUserCreate';
-import ProdList from './ProdList';
-import TotalCategories from './TotalCategories';
-import TotalProducts from './TotalProducts';
-import TotalUsers from './TotalUsers';
-
+import React from 'react';
+import ContentWrapper from './ContentWrapper';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          Dashboard Goffice
-        </h1>
-        <nav>
-
-        </nav>
-      </header>
-
-    <body>
-      <div> 
-        <div className='div-row'>
-          <LastProductCreate />
-          <LastUserCreate />
+    <React.Fragment>
+      	<div id="wrapper">
+          <ContentWrapper />
         </div>
-
-        <ProdList />
-        <TotalCategories />
-        <TotalProducts />
-        <TotalUsers />
-      </div>
-    </body>
-  </div>
+    </React.Fragment>
   );
 }
 
