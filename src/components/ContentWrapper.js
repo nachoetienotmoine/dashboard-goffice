@@ -13,7 +13,7 @@ function ContentWrapper(){
     useEffect(() => {
         console.log('%cProducts', 'color: green');
     
-        fetch('https://verdumarket8.herokuapp.com/api/products')
+        fetch('http://localhost:3000/api/products')
         .then(response => response.json())
         .then(data => {
             setProductsDb(data.data)
@@ -24,7 +24,7 @@ function ContentWrapper(){
     useEffect(() => {
         console.log('%cUsers', 'color: yellow');
     
-        fetch('https://verdumarket8.herokuapp.com/api/users')
+        fetch('http://localhost:3000/api/users')
         .then(response => response.json())
         .then(data => {
             setUsersDb(data.data)
@@ -42,7 +42,7 @@ function ContentWrapper(){
                     {/* <TopBar /> */}
                     {console.log('productsdb',productsDb)}
                     {console.log('usersDb',usersDb)}
-                    <AllContent data={productsDb,usersDb} />
+                    <AllContent data={productsDb && usersDb} />
                     <Products />
                     <Footer  />
                 </div>

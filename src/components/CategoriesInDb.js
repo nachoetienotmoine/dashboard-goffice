@@ -11,10 +11,10 @@ function CategoriesInDb(){
     useEffect(() => {
         console.log('%Categories', 'color: red');
     
-        fetch('https://verdumarket8.herokuapp.com/api/products')
+        fetch('http://localhost:3000/api/products')
         .then(response => response.json())
         .then(data => {
-            setCategoriesInDb(data.data.countByCategory)
+            setCategoriesInDb(data.countByCategory)
         })
         .catch(error => console.log(error));
     }, [])

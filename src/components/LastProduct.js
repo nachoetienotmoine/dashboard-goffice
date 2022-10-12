@@ -11,10 +11,10 @@ class LastProductInDB extends Component {
     }
  
     componentDidMount(){
-            fetch('https://verdumarket8.herokuapp.com/api/products/lastProduct')
+            fetch('http://localhost:3000/api/products')
             .then(res => res.json())
             .then((promiseData) => {
-                let lastProduct = promiseData.data;
+                let lastProduct = promiseData.products[promiseData.products.length-1];
                 this.setState({product: lastProduct})
             }) 
     }
