@@ -16,14 +16,13 @@ class Products extends Component{
     //Montaje
     componentDidMount(){
     
-        //fetch('https://verdumarket8.herokuapp.com/api/products')
-        fetch('https://verdumarket8.herokuapp.com/api/products')
+        fetch('http://localhost:3000/api/products')
         .then(respuesta =>{
             return respuesta.json()
         })
         .then(products =>{
             //console.log(movies)
-            this.setState({products: products.data.products})
+            this.setState({products: products.products})
         })
         .catch(error => console.log(error))
 
