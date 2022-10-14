@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 //Importar nuestro componente
 import Category from './Category';
 import Sold from './Sold';
@@ -23,7 +23,7 @@ function CategoriesInDb(){
     function displayData(selection){
         console.log(dataSelected);
         switch (selection) {
-            case "Categorias":
+            case "categorias":
                     fetch('http://localhost:3000/api/products')
                     .then(response => response.json())
                     .then(data => {
@@ -61,6 +61,13 @@ function CategoriesInDb(){
                 break;
         
             default:
+                fetch('http://localhost:3000/api/products')
+                    .then(response => response.json())
+                    .then(data => {
+                        setCategoriesInDb(data.countByCategory)
+                        setDataSelected("categorias")
+                    })
+                    .catch(error => console.log(error));
                 break;
         }
     }
