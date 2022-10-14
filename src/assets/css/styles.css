@@ -35,3 +35,30 @@
     color: grey;
   }
   
+  .btnAll {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .btnAll .btn-Selection {
+    border: none;
+    display: flex;
+    transition: .3s;
+    outline: none;
+  }
+
+  .btnAll .btn-Selection:hover{
+    scale: 1.06;
+  }
+
+  .btnAll .btn-Selection:active{
+    scale: 0.94;
+  }
+
+
+
+
+
+
+  
