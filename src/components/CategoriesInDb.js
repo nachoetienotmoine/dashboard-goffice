@@ -3,6 +3,7 @@ import React from 'react';
 import Category from './Category';
 import Sold from './Sold';
 import MostSold from './MostSold'
+import Create from './Create'
 import {useEffect, useState} from 'react';
 
 
@@ -57,7 +58,7 @@ function CategoriesInDb(){
                 break;
                 
             case "Creación":
-                    console.log("Creación");
+                    setDataSelected("Creación")
                 break;
 
             case "Edición":
@@ -254,6 +255,69 @@ function CategoriesInDb(){
                                     categoriesInDb.map((category,index)=>{
                                         return  <MostSold  {...category }  key={index} />
                                     })
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </React.Fragment> 
+        )
+    }
+
+
+
+    if (dataSelected === "Creación"){
+        return (
+            <React.Fragment>
+                {/*<!-- Genres in DB -->*/}
+                <div className="col-lg-6 mb-4">						
+                    <div className="card shadow mb-4 " >
+                        <div className='btnAll'>
+                            <button className='btn-Selection' onClick={() => displayData("Categorias")}>
+                                <div className="card-header py-3">
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Categorias</h5>
+                                </div>
+                            </button>
+
+                            <button className='btn-Selection' onClick={() => displayData("Ventas")}>
+                                <div className="card-header py-3">
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Ventas</h5>
+                                </div>
+                            </button>
+
+                            <button className='btn-Selection' onClick={() => displayData("Vendidos")}>
+                                <div className="card-header py-3">
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Vendidos</h5>
+                                </div>
+                            </button>
+
+                            <button className='btn-Selection' onClick={() => displayData("Creación")}>
+                                <div className="card-header py-3">
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Creación</h5>
+                                </div>
+                            </button>
+
+                            <button className='btn-Selection' onClick={() => displayData("Edición")}>
+                                <div className="card-header py-3">
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Edición</h5>
+                                </div>
+                            </button>
+
+                            <button className='btn-Selection' onClick={() => displayData("Eliminar")}>
+                                <div className="card-header py-3">
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Eliminar</h5>
+                                </div>
+                            </button>
+                        </div>
+                        
+                        <div className="card-body fondoCaja">
+                            <div  className="row">
+                                {dataSelected ===  "Creación"}
+                                {
+                                    // categoriesInDb.map((category,index)=>{
+                                    //     return  <MostSold  {...category }  key={index} />
+                                    // })
+                                    <Create  />
                                 }
                             </div>
                         </div>
