@@ -3,17 +3,15 @@ import {useEffect, useState} from 'react';
 
 function Create (props){
 
-    let [createFrom, setCreateForm] = useState([])
+    let [createForm, setCreateForm] = useState()
 
-    // useEffect (() => {
-    //     fetch('http://localhost:3000/api/createProduct')
-    //         .then(res => res.body.getReader())
-    //         .then(data => {setCreateForm(ReactDOM.createRoot(data))
-    // })
+    useEffect (() => {
+        fetch('http://localhost:3000/api/createProduct')
+            .then((res) => {console.log(res);})
+    })
 
-    console.log(createFrom);
-
-    if (createFrom){
+    if (createForm){
+        console.log(createForm);
         return (
             <div>
                 <h1 className="col-lg-9">Creación de productos</h1>
