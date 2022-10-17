@@ -37,15 +37,18 @@
   
   .btnAll {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
+    
   }
 
   .btnAll .btn-Selection {
     border: none;
-    display: flex;
     transition: .3s;
     outline: none;
+    padding: 0;
+    margin-left: 0.95vw;
+    margin-right: 0.95vw;
   }
 
   .btnAll .btn-Selection:hover{
@@ -61,6 +64,24 @@
     flex-direction: column;
   }
 
+  @media (min-width : 1024px) {
+    .create_wrapper {
+      align-self: center;
+    }
+
+    .CreateForm {
+      max-width: 700px;
+    }
+}
+
+  .products-container{
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+
+  .products-container .product-wrapper {
+    width: 200px;
+  }
   
 
 

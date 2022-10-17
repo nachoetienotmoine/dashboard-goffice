@@ -33,7 +33,7 @@ function MostSold(props){
     return (
         <div>
              <h1 className="col-lg-9">5 productos más vendidos</h1>
-            {fiveMostSold && fiveMostSold.map((user,i) => {
+            {fiveMostSold && fiveMostSold[0] !== null && fiveMostSold.map((user,i) => {
                     return (
                         <React.Fragment key={i}>
                             

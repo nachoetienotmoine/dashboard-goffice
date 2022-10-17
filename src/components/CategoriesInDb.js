@@ -4,7 +4,7 @@ import Category from './Category';
 import Sold from './Sold';
 import MostSold from './MostSold';
 import Create from './Create';
-import Edit from './Edit';
+import Productos from './Productos';
 import {useEffect, useState} from 'react';
 
 
@@ -62,14 +62,10 @@ function CategoriesInDb(){
                     setDataSelected("Creación")
                 break;
 
-            case "Edición":
-                    setDataSelected("Edición")
+            case "Productos":
+                    setDataSelected("Productos")
                 break;
 
-            case "Eliminar":
-                    console.log("Eliminar");
-                break;
-        
             default:
                 fetch('http://localhost:3000/api/products')
                     .then(response => response.json())
@@ -112,17 +108,12 @@ function CategoriesInDb(){
                                 </div>
                             </button>
 
-                            <button className='btn-Selection' onClick={() => displayData("Edición")}>
+                            <button className='btn-Selection' onClick={() => displayData("Productos")}>
                                 <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Edición</h5>
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Productos</h5>
                                 </div>
                             </button>
 
-                            <button className='btn-Selection' onClick={() => displayData("Eliminar")}>
-                                <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Eliminar</h5>
-                                </div>
-                            </button>
                         </div>
                         
                         <div className="card-body fondoCaja">
@@ -174,17 +165,12 @@ function CategoriesInDb(){
                                 </div>
                             </button>
 
-                            <button className='btn-Selection' onClick={() => displayData("Edición")}>
+                            <button className='btn-Selection' onClick={() => displayData("Productos")}>
                                 <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Edición</h5>
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Productos</h5>
                                 </div>
                             </button>
 
-                            <button className='btn-Selection' onClick={() => displayData("Eliminar")}>
-                                <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Eliminar</h5>
-                                </div>
-                            </button>
                         </div>
                         
                         <div className="card-body fondoCaja">
@@ -236,17 +222,12 @@ function CategoriesInDb(){
                                 </div>
                             </button>
 
-                            <button className='btn-Selection' onClick={() => displayData("Edición")}>
+                            <button className='btn-Selection' onClick={() => displayData("Productos")}>
                                 <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Edición</h5>
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Productos</h5>
                                 </div>
                             </button>
 
-                            <button className='btn-Selection' onClick={() => displayData("Eliminar")}>
-                                <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Eliminar</h5>
-                                </div>
-                            </button>
                         </div>
                         
                         <div className="card-body fondoCaja">
@@ -298,21 +279,16 @@ function CategoriesInDb(){
                                 </div>
                             </button>
 
-                            <button className='btn-Selection' onClick={() => displayData("Edición")}>
+                            <button className='btn-Selection' onClick={() => displayData("Productos")}>
                                 <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Edición</h5>
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Productos</h5>
                                 </div>
                             </button>
 
-                            <button className='btn-Selection' onClick={() => displayData("Eliminar")}>
-                                <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Eliminar</h5>
-                                </div>
-                            </button>
                         </div>
                         
-                        <div className="card-body fondoCaja">
-                            <div  className="row">
+                        <div className="card-body fondoCaja create_wrapper">
+                            <div>
                                 {dataSelected ===  "Creación"}
                                 {
                                     // categoriesInDb.map((category,index)=>{
@@ -330,7 +306,7 @@ function CategoriesInDb(){
 
 
 
-    if (dataSelected === "Edición"){
+    if (dataSelected === "Productos"){
         return (
             <React.Fragment>
                 {/*<!-- Genres in DB -->*/}
@@ -361,17 +337,12 @@ function CategoriesInDb(){
                                 </div>
                             </button>
 
-                            <button className='btn-Selection' onClick={() => displayData("Edición")}>
+                            <button className='btn-Selection' onClick={() => displayData("Productos")}>
                                 <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Edición</h5>
+                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Productos</h5>
                                 </div>
                             </button>
 
-                            <button className='btn-Selection' onClick={() => displayData("Eliminar")}>
-                                <div className="card-header py-3">
-                                    <h5 className="m-0 font-weight-bold text-gray-800 titulo">Eliminar</h5>
-                                </div>
-                            </button>
                         </div>
                         
                         <div className="card-body fondoCaja">
@@ -381,7 +352,7 @@ function CategoriesInDb(){
                                     // categoriesInDb.map((category,index)=>{
                                     //     return  <MostSold  {...category }  key={index} />
                                     // })
-                                    <Edit  />
+                                    <Productos  />
                                 }
                             </div>
                         </div>

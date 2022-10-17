@@ -5,7 +5,7 @@ function Create (props){
 
         return (
             <div>
-                <h1 className="col-lg-9">Creación de productos</h1>
+                <h1 className="create_h1">Creación de productos</h1>
                 <form action="http://localhost:3000/api/createProduct" method="POST" className='CreateForm' encType='multipart/form-data'>
                     <label name='name'>Name</label>
                     <input name='name'></input>
