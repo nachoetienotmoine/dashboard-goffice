@@ -4,31 +4,24 @@ import {useEffect, useState} from 'react';
 function MostSold(props){
 
     const [fiveMostSold, setFiveMostSold] = useState()
-    const [dataUsers, setDataUsers] = useState()
     const [soldData, setSoldData] = useState([])
     
+    const getImages = async (product) => {
+        for (let i = 0; i < product.length; i++){
+            let response = await fetch(`http://localhost:3000/api/products/${product[i].id}`);
+            let data = await response.json();
+            setSoldData(oldData => [...oldData, data]);
+        }
+    }
+
     useEffect(() => {
-        if (props.dataProductName !== undefined){
-            setDataUsers(props.dataUsers);
-            
             fetch('http://localhost:3000/api/fiveMostSold')
                 .then(res => res.json())
-                .then((data) => {setFiveMostSold(data);})
-        }  
+                .then((data) => {
+                    setFiveMostSold(data);
+                    getImages(data)
+                })
     }, [])
-
-    useEffect(() => {
-        if (fiveMostSold){
-            fiveMostSold.forEach((sold) => {
-                if (sold){
-                    fetch(`http://localhost:3000/api/products/${sold.id}`)
-                    .then(res => res.json())
-                    .then((data) => {setSoldData(oldData => [...oldData, data]);})
-                } 
-            })
-
-        }
-    },[fiveMostSold])
 
     return (
         <div>
