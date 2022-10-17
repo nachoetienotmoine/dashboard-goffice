@@ -56,7 +56,12 @@
     scale: 0.94;
   }
 
+  .CreateForm {
+    display: flex;
+    flex-direction: column;
+  }
 
+  
 
 
 

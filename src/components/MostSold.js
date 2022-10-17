@@ -20,9 +20,11 @@ function MostSold(props){
     useEffect(() => {
         if (fiveMostSold){
             fiveMostSold.forEach((sold) => {
-                fetch(`http://localhost:3000/api/products/${sold.id}`)
+                if (sold){
+                    fetch(`http://localhost:3000/api/products/${sold.id}`)
                     .then(res => res.json())
-                    .then((data) => {setSoldData(oldData => [...oldData, data]);}) 
+                    .then((data) => {setSoldData(oldData => [...oldData, data]);})
+                } 
             })
 
         }
@@ -41,7 +43,7 @@ function MostSold(props){
                                     <div className="card-body">
                                         {soldData[i] && "Loading Product Image" && soldData[i].productData[0].name}
                                         <hr />
-                                        {fiveMostSold[i].repeats}
+                                        {fiveMostSold[i] && fiveMostSold[i].repeats}
                                     </div>
                                 </div>
                             </div>
