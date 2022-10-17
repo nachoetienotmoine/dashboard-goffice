@@ -3,28 +3,25 @@ import {useEffect, useState} from 'react';
 
 function Products (props){
 
-    const [productos, setProductos] = useState()
+    const [productos, setProductos] = useState(null)
     const [imagenProductos, setImagenProductos] = useState([])
-    
+
+    const getImages = async (product) => {
+        for (let i = 0; i < product.length; i++){
+            let response = await fetch(`http://localhost:3000/api/products/${product[i].id}`);
+            let data = await response.json();
+            setImagenProductos(oldData => [...oldData, data]);
+        }
+    }
+
     useEffect(() => {
         fetch('http://localhost:3000/api/products')
             .then(res => res.json())
-            .then((data) => {setProductos(data);})  
-                
+            .then((data) => {
+                setProductos(data);
+                getImages(data.products);
+            })  
     }, [])
-
-    useEffect(() => {
-        if (productos){
-            productos.products.forEach((sold) => {
-                if (sold){
-                    fetch(`http://localhost:3000/api/products/${sold.id}`)
-                        .then(res => res.json())
-                        .then((data) => {setImagenProductos(oldData => [...oldData, data]);})
-                } 
-            })
-
-        }
-    },[productos])
 
     return (
         <div className='products-container'>
