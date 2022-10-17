@@ -51,7 +51,7 @@ function Create (props){
                     </select> 
 
                     <br></br>
-                    <button type="submit">Save Changes</button>             
+                    <button onClick={() => setTimeout(() => {window.location.href = 'http://localhost:4000/'},2000)} type="submit">Save Changes</button>             
                 </form>
             </div>
         )
